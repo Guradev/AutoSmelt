@@ -1,0 +1,7 @@
+name: AutoSmelt
+version: '1.0'
+main: net.gura.autoSmelt.AutoSmelt
+api-version: '1.18'
+load: STARTUP
+authors: [ Gura ]
+description: Minecraft Plugin that auto smelts ores when you break them
