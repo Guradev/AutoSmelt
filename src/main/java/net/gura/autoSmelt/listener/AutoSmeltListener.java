@@ -1,5 +1,6 @@
 package net.gura.autoSmelt.listener;
 
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.enchantments.Enchantment;
@@ -58,6 +59,8 @@ public class AutoSmeltListener implements Listener {
         Material type = block.getType();
         ItemStack item = player.getItemInHand();
 
+        if (player.getGameMode() == GameMode.CREATIVE) return;
+
         if (item != null && item.containsEnchantment(Enchantment.SILK_TOUCH)) return;
 
         if (!SMELT_MAP.containsKey(type)) return;
@@ -83,5 +86,4 @@ public class AutoSmeltListener implements Listener {
         block.getWorld().spawn(block.getLocation(), ExperienceOrb.class).setExperience(xp);
 
     }
-
 }
