@@ -47,7 +47,7 @@ public class AutoSmeltListener implements Listener {
             case GLOWING_REDSTONE_ORE: return random(1, 5);
             case QUARTZ_ORE: return random(2, 5);
             case IRON_ORE:
-            case GOLD_ORE: return 1;
+            case GOLD_ORE: return random(1, 3);
             default: return 0;
         }
     }
